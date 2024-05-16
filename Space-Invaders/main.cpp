@@ -24,20 +24,19 @@ int main() {
 
         // Clear the window
         window->clear(sf::Color::Black);
-
-        sf::CircleShape circle(50);
-        circle.setFillColor(sf::Color::Green);
-        circle.setPosition(300,400);
-        window->draw(circle);
-        sf::CircleShape square(80, 4);
-        square.setFillColor(sf::Color::Red);
-        square.setPosition(800, 600);
-        sf::CircleShape triangle(80, 3);
-        triangle.setFillColor(sf::Color::Blue);
-        triangle.setPosition(700, 200);
-        window->draw(circle);
-        window->draw(triangle);
-        window->draw(square);
+        sf::Texture texture;
+        texture.loadFromFile("assets/textures/outscal_logo.png");
+        sf::Sprite outscal_sprite;
+        outscal_sprite.setTexture(texture);
+        outscal_sprite.setPosition(200, 100); 
+        outscal_sprite.setRotation(45); 
+        outscal_sprite.setScale(0.5, 0.5);
+        sf::Font font;
+        font.loadFromFile("assets/fonts/OpenSans.ttf");
+        sf::Text text("SFML is Awesome", font, 50);
+        text.setFillColor(sf::Color::White);
+        window->draw(text);
+        window->draw(outscal_sprite);
         window->display();
     }
 
