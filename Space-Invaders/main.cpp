@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 
+
 int main() {
 
     
@@ -9,6 +10,7 @@ int main() {
     sf::RenderWindow* window = new sf::RenderWindow(videoMode.getFullscreenModes()[0], "My SFML Window",sf::Style::Fullscreen);
     window->setFramerateLimit(60);
     window->setPosition(sf::Vector2i(100, 100));
+   
    
 
     // Game loop to keep the window open
@@ -21,11 +23,21 @@ int main() {
         }
 
         // Clear the window
-        window->clear(sf::Color::Blue);
+        window->clear(sf::Color::Black);
 
-        // Draw your content here...
-
-        // Display what was drawn
+        sf::CircleShape circle(50);
+        circle.setFillColor(sf::Color::Green);
+        circle.setPosition(300,400);
+        window->draw(circle);
+        sf::CircleShape square(80, 4);
+        square.setFillColor(sf::Color::Red);
+        square.setPosition(800, 600);
+        sf::CircleShape triangle(80, 3);
+        triangle.setFillColor(sf::Color::Blue);
+        triangle.setPosition(700, 200);
+        window->draw(circle);
+        window->draw(triangle);
+        window->draw(square);
         window->display();
     }
 
