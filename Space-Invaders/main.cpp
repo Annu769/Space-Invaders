@@ -1,4 +1,34 @@
+#include <iostream>
 #include <SFML/Graphics.hpp>
+using namespace std;
+class Player 
+{
+private:
+   
+    sf::Vector2f playerPosition = sf::Vector2f(200.0f,100.0f);
+    int health =3;
+    int playerScore = 0;
+    int movementSpeed = 5;
+public:
+    sf::Texture playerTexture;
+    sf::Sprite playerSprite;
+    int GetHealth()
+    {
+        return health;
+    }
+    int GetScore()
+    {
+        return playerScore;
+    }
+    int GetMovementSpeed()
+    {
+        return movementSpeed;
+    }
+    sf::Vector2f GetPlayerPosition()
+    {
+        return playerPosition;
+    }
+};
 
 int main() {
 
@@ -18,11 +48,14 @@ int main() {
         }
 
         // Clear the window
-        window->clear(sf::Color::Blue);
+        window->clear(sf::Color::Black);
 
-        // Draw your content here...
-
-        // Display what was drawn
+        Player player;
+        cout<<"Player Health "<< player.GetHealth() << endl;
+        cout << "Player Score " << player.GetScore() << endl;
+        cout << "Player MovementSpeed " << player.GetMovementSpeed() << endl;
+       
+        
         window->display();
     }
 
