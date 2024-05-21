@@ -1,47 +1,29 @@
 #pragma once
+
 #include "../Header/GraphicService.h"
-// Service Locator Class summary this class manages acces to various services in the application
+#include "../Header/EventService.h"
+
+// Service Locator Class summary this class manages access to various services in the application
 class ServiceLocator
 {
 private:
-	GraphicService* graphicService;
-	ServiceLocator()
-	{
+    GraphicService* graphicService;
+    EventService* eventService;
 
-	}
-	~ServiceLocator()
-	{
+    ServiceLocator();
+    ~ServiceLocator();
+    void createService();
+    void clearALlService();
 
-	}
-	void createService()
-	{
 
-	}
-	void clearALlService()
-	{
-
-	}
 public:
-	//public Methods:
-	static ServiceLocator* getInstance()
-	{
-		//provide a method to acces the unique ServiceLocator instance (object ).
-	}
-	void initialize()
-	{
-		//Initializes the service locator.
-	}
-	void Update()
-	{
-		//Update all service
-	}
-	void render()
-	{
-		//render using the service.
-	}
-	GraphicService* getGraphicService()
-	{
+    // Provide a method to access the unique ServiceLocator instance (object).
+    static ServiceLocator* getInstance();
 
-	}
-
+    // Public Methods:
+    void initialize();
+    void Update();
+    void render();
+    GraphicService* getGraphicService();
+    EventService* getEventService();
 };

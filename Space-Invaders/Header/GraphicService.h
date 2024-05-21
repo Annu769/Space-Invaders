@@ -8,50 +8,27 @@ private:
 	const sf::Color windowColor = sf::Color::Blue;
 	sf::VideoMode* videoMode;
 	sf::RenderWindow* gameWindow;
-	void setVideoMode()
-	{
+	void setVideoMode();
 
-	}
-	void onDestroy()
-	{
+	void onDestroy();
 
-	}
 public:
-	GraphicService()
-	{
+	GraphicService();
 
-	}
-	~GraphicService()
-	{
+	~GraphicService();
 
-	}
-	sf::RenderWindow* createGameWindow()
-	{
+	sf::RenderWindow* createGameWindow();
 
-	}
-	void initialize()
-	{
+	void initialize();
 
-	}
-	void update()
-	{
+	void update();
 
-	}
-	void render()
-	{
+	void render();
 
-	}
-	bool isGameWindowOpen()
-	{
+	bool isGameWindowOpen();
 
-	}
-	sf::RenderWindow* getGameWindow()
-	{
+	sf::RenderWindow* getGameWindow();
 
-	}
-	sf::Color getWindowColor()
-	{
+	sf::Color getWindowColor();
 
-	}
-	
 };

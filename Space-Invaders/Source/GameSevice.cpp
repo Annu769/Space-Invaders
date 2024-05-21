@@ -32,7 +32,9 @@ void GameService::Ignite()
 
 void GameService::Update()
 {
+	serviceLocator->getEventService()->processEvents();
 	serviceLocator->Update();
+
 }
 
 void GameService::Render()
