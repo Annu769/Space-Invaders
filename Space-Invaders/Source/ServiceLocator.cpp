@@ -1,9 +1,12 @@
 #include"../Header/ServiceLocator.h"
-#include <iostream>
+
 
  ServiceLocator::ServiceLocator()
 {
 	 graphicService = nullptr;
+	 eventService = nullptr;
+	 createService();
+
 }
  ServiceLocator:: ~ServiceLocator()
  {
@@ -12,11 +15,12 @@
  void ServiceLocator::createService()
  {
 	 graphicService = new GraphicService();
+	 eventService = new EventService();
  }
  void ServiceLocator::clearALlService()
  {
 	 delete(graphicService);
-	 graphicService = nullptr;
+	 delete(eventService);
  }
  ServiceLocator *ServiceLocator::getInstance()
  {
@@ -26,10 +30,12 @@
  void ServiceLocator::initialize()
  {
 	 graphicService->initialize();
+	 eventService->initialize();
  }
  void ServiceLocator::Update()
  {
 	 graphicService->update();
+	 eventService->update();
  }
  void ServiceLocator::render()
  {
@@ -38,4 +44,8 @@
  GraphicService* ServiceLocator::getGraphicService()
  {
 	 return graphicService;
+ }
+ EventService* ServiceLocator::getEventService()
+ {
+	 return eventService;
  }

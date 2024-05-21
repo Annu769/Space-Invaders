@@ -7,36 +7,21 @@ private :
 	ServiceLocator* serviceLocator;
 	sf::RenderWindow* gameWindow;
 
-	void Initialize()
-	{
+	void Initialize();
 
-	}
-	void Destroy()
-	{
+	void Destroy();
 
-	}
 public:
-	GameService() {
+	GameService();
 
-	}
-	~GameService()
-	{
+	~GameService();
+	
+	void Ignite();
 
-	}
-	void Ignite()
-	{
+	void Update();
 
-	}
-	void Update()
-	{
+	void Render();
 
-	}
-	void Render()
-	{
+	bool isRunning();
 
-	}
-	bool isRunning()
-	{
-
-	}
 };
