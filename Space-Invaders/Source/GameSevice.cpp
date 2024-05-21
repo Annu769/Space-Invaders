@@ -1,5 +1,5 @@
 #include "../Header/GameService.h"
-#include <iostream>
+#include "../Header/GraphicService.h"
 
 void GameService::Initialize()
 {
@@ -13,32 +13,38 @@ void GameService::Destroy()
 
 GameService::GameService()
 {
-	//constructor
+	serviceLocator = nullptr;
+	gameWindow = __nullptr;
+
 }
 
 GameService::~GameService()
 {
 	//destructor
+	Destroy();
 }
 
 void GameService::Ignite()
 {
-	//starts the game
+	serviceLocator = ServiceLocator::getInstance();
+	Initialize();
 }
 
 void GameService::Update()
 {
-	// Updates the game logic and game state.
+	serviceLocator->Update();
 }
 
 void GameService::Render()
 {
-	// Renders each frame of the game.
+	gameWindow->clear(serviceLocator->getGraphicService()->getWindowColor());
+	serviceLocator->render();
+	gameWindow->display();
 }
 
 bool GameService::isRunning()
 {
 	// Checks if the game is currently running.
-	return false; //default return
+	return serviceLocator->getGraphicService()->isGameWindowOpen();
 }
 
