@@ -56,6 +56,7 @@ using namespace std;
 	  {
 		  gameService.Update();
 		  gameService.Render();
+		  gameService.isRunning();
 	  }
 //    Player player;
 //    // Define the video mode (dimensions)
