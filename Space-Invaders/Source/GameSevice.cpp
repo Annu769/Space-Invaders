@@ -1,16 +1,5 @@
 #include "../Header/GameService.h"
 #include "../Header/GraphicService.h"
-
-void GameService::Initialize()
-{
-	//... Get things running
-}
-
-void GameService::Destroy()
-{
-	//cleanup resources
-}
-
 GameService::GameService()
 {
 	serviceLocator = nullptr;
@@ -24,9 +13,20 @@ GameService::~GameService()
 	Destroy();
 }
 
-void GameService::Ignite()
+void GameService::Initialize()
 {
 	serviceLocator = ServiceLocator::getInstance();
+	serviceLocator->initialize();
+	gameWindow = serviceLocator->getGraphicService()->getGameWindow();
+}
+
+void GameService::Destroy()
+{
+	//cleanup resources
+}
+
+void GameService::Ignite()
+{
 	Initialize();
 }
 

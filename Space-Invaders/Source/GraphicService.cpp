@@ -11,6 +11,8 @@ GraphicService:: ~GraphicService()
 void GraphicService::initialize()
 {
 	gameWindow = createGameWindow();
+	gameWindow->setVerticalSyncEnabled(true); // Enable VSync
+	gameWindow->setFramerateLimit(frame_rate);
 }
 sf::RenderWindow* GraphicService::createGameWindow()
 {
@@ -29,15 +31,20 @@ void GraphicService::onDestroy()
 }
 void GraphicService::update()
 {
-
+	
 }
 void GraphicService::render()
 {
+	if (gameWindow)
+	{
+		gameWindow->clear(windowColor);
 
+		gameWindow->display();
+	}
 }
 bool GraphicService::isGameWindowOpen()
 {
-	return gameWindow->isOpen();
+	return gameWindow && gameWindow->isOpen();
 }
 sf::RenderWindow* GraphicService::getGameWindow()
 {
