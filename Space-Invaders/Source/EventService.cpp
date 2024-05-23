@@ -46,4 +46,12 @@ bool EventService::pressedEscapeKey() { return gameEvent.key.code == sf::Keyboar
 bool EventService::isGameWindowOpen() { return gameWindow && gameWindow->isOpen(); }
 
 bool EventService::gameWindowWasClosed() { return gameEvent.type == sf::Event::Closed; }
+bool EventService::pressedLeftKey()
+{
+	return gameEvent.key.code == sf::Keyboard::A;
+}
+bool EventService::pressedRightKey()
+{
+	return gameEvent.key.code == sf::Keyboard::D;
+}
 

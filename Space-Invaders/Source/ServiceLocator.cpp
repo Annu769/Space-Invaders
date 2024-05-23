@@ -5,6 +5,7 @@
 {
 	 graphicService = nullptr;
 	 eventService = nullptr;
+	 playerService = nullptr;
 	 createService();
 
 }
@@ -16,11 +17,14 @@
  {
 	 graphicService = new GraphicService();
 	 eventService = new EventService();
+	 playerService = new PlayerService();
+	 
  }
  void ServiceLocator::clearALlService()
  {
 	 delete(graphicService);
 	 delete(eventService);
+	 delete(playerService);
  }
  ServiceLocator *ServiceLocator::getInstance()
  {
@@ -31,15 +35,18 @@
  {
 	 graphicService->initialize();
 	 eventService->initialize();
+	 playerService->initialize();
  }
  void ServiceLocator::Update()
  {
 	 graphicService->update();
 	 eventService->update();
+	 playerService->update();
  }
  void ServiceLocator::render()
  {
 	 graphicService->render();
+	 playerService->render();
  }
  GraphicService* ServiceLocator::getGraphicService()
  {
@@ -48,4 +55,8 @@
  EventService* ServiceLocator::getEventService()
  {
 	 return eventService;
+ }
+ PlayerService* ServiceLocator::getPlayerService()
+ {
+	 return playerService;
  }
