@@ -5,7 +5,8 @@ private:
 	const std::string gameWindowTitel = "Outscal Present - Alien Invader";
 	const int gameWindowWidth = 1280;
 	const int gameWindowHeight = 720;
-	const sf::Color windowColor = sf::Color::Black;
+	const sf::Color windowColor = sf::Color::Blue;
+	const int frame_rate = 60;
 	sf::VideoMode* videoMode;
 	sf::RenderWindow* gameWindow;
 	void setVideoMode();

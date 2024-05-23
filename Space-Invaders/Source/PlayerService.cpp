@@ -1,5 +1,6 @@
 #include"../Header/PlayerService.h"
 #include"../Header/ServiceLocator.h"
+#include <iostream>
 
 PlayerService::PlayerService()
 {
@@ -14,45 +15,52 @@ void PlayerService::initialize()
 }
 void PlayerService::update()
 {
-	ProcessPalayerInput();
+	
 	playerSprite.setPosition(getPosition());
+	ProcessPalayerInput();
 }
 void PlayerService::render()
 {
+	playerSprite.setPosition(getPosition());  // Update position before rendering
 	gameWindow->draw(playerSprite);
 }
 void PlayerService::initializePlayerScript()
 {
-	if (playerTexture.loadFromFile(player_texture_path));
-	{
+	if (playerTexture.loadFromFile(player_texture_path)) {
 		playerSprite.setTexture(playerTexture);
+	}
+	else {
+		std::cout << "Failed to load player texture from path: " << player_texture_path.toAnsiString() << std::endl;
 	}
 }
 void PlayerService::ProcessPalayerInput()
 {
 	EventService* GameEvent = ServiceLocator::getInstance()->getEventService();
+	float deltatime = ServiceLocator::getInstance()->getTimeService()->getDeltaTime();
 	if (GameEvent->isKeyboardEvent())
 	{
 		if (GameEvent->pressedLeftKey())
 		{
-			Move(-1.0f * getMoveSpeed());
+			Moveleft(deltatime);
 		}
 		if (GameEvent->pressedRightKey())
 		{
-			Move(1.0f * getMoveSpeed());
+			MoveRight(deltatime);
 		}
 	}
 	
 }
-void PlayerService::Move(float offsetX)
-{
-	position.x += offsetX;
-}
+ 
 sf::Vector2f PlayerService::getPosition()
 {
 	return position;
 }
-int PlayerService::getMoveSpeed()
+void PlayerService::Moveleft(float deltaTIme)
 {
-	return movementSpeed;
+	position.x -= movementSpeed * deltaTIme;
+
+}
+void PlayerService::MoveRight(float deltaTIme)
+{
+	position.x += movementSpeed * deltaTIme;
 }

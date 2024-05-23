@@ -11,6 +11,8 @@ GraphicService:: ~GraphicService()
 void GraphicService::initialize()
 {
 	gameWindow = createGameWindow();
+	gameWindow->setVerticalSyncEnabled(true); // Enable VSync
+	gameWindow->setFramerateLimit(frame_rate);
 }
 sf::RenderWindow* GraphicService::createGameWindow()
 {
