@@ -29,15 +29,20 @@ void GraphicService::onDestroy()
 }
 void GraphicService::update()
 {
-
+	
 }
 void GraphicService::render()
 {
+	if (gameWindow)
+	{
+		gameWindow->clear(windowColor);
 
+		gameWindow->display();
+	}
 }
 bool GraphicService::isGameWindowOpen()
 {
-	return gameWindow->isOpen();
+	return gameWindow && gameWindow->isOpen();
 }
 sf::RenderWindow* GraphicService::getGameWindow()
 {

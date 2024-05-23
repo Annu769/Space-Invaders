@@ -58,7 +58,9 @@ using namespace std;
 		  gameService->Render();
 		 
 	  }
-    //Player player;
+      delete gameService;
+      return 0;
+      //Player player;
     //// Define the video mode (dimensions)
     //sf::VideoMode videoMode = *(new sf::VideoMode(800, 600));
 
