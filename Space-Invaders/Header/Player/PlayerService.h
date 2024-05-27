@@ -1,5 +1,7 @@
 #pragma once
-class PlayerController;
+namespace Player
+{
+	class PlayerController;
 
 class PlayerService
 {
@@ -17,6 +19,8 @@ public:
 	
 	
 };
+}
+
 	    
 	        
 	    

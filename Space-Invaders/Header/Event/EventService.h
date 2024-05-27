@@ -1,32 +1,34 @@
 #pragma once
 #include<SFML/Graphics/RenderWindow.hpp>
 #include<SFML/Window/Event.hpp>
-
-class EventService
+namespace Event
 {
-private :
-	sf::Event gameEvent;
-	sf::RenderWindow* gameWindow;
-	bool isGameWindowOpen();
-	bool gameWindowWasClosed();
-	bool hasQuitGame();
-public:
+	class EventService
+	{
+	private:
+		sf::Event gameEvent;
+		sf::RenderWindow* gameWindow;
+		bool isGameWindowOpen();
+		bool gameWindowWasClosed();
+		bool hasQuitGame();
+	public:
 
-	EventService();
+		EventService();
 
-	~EventService();
+		~EventService();
 
-	void initialize();
+		void initialize();
 
-	void update();
-		
-	void processEvents();
+		void update();
+
+		void processEvents();
 
 		// while window is open we will check for events
-	bool pressedEscapeKey();
+		bool pressedEscapeKey();
 
-	bool isKeyboardEvent();
-	bool pressedLeftKey();
-	bool pressedRightKey();
+		bool isKeyboardEvent();
+		bool pressedLeftKey();
+		bool pressedRightKey();
 
-};
+	};
+}
