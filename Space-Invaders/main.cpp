@@ -2,8 +2,8 @@
 #include"../../Header/Main/GameService.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
 using namespace std;
+using namespace Main;
   int main() {
 
 	  GameService* gameService = new GameService();
