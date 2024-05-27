@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
@@ -18,12 +18,35 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\GameSevice.cpp">
+    <ClCompile Include="Source\MainGameService\GameSevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\ServiceLocator.cpp">
+    <ClCompile Include="Source\GlobalService\ServiceLocator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+
+    <ClCompile Include="Source\GraphicService\GraphicService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\EventService\EventService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PlayerSource\PlayerService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\TimeSource\TimeService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PlayerSource\PlayerModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PlayerSource\PlayerView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PlayerSource\PlayerController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+
     <ClCompile Include="Source\GraphicService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,14 +59,38 @@
     <ClCompile Include="Source\TimeService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header\GameService.h">
+    <ClInclude Include="Header\Main\GameService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header\ServiceLocator.h">
+    <ClInclude Include="Header\Global\ServiceLocator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+
+    <ClInclude Include="Header\Graphic\GraphicService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Event\EventService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Player\PlayerService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\TIme\TimeService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Player\PlayerModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Player\PlayerView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Player\PlayerController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+
     <ClInclude Include="Header\GraphicService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -56,5 +103,6 @@
     <ClInclude Include="Header\TimeService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+
   </ItemGroup>
 </Project>
