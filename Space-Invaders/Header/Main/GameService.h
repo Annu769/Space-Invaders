@@ -1,27 +1,30 @@
 #pragma once
 #include<SFML/Graphics.hpp>
 #include "../../Header/Global/ServiceLocator.h"
-class GameService
+namespace Main
 {
-private :
-	ServiceLocator* serviceLocator;
-	sf::RenderWindow* gameWindow;
+	class GameService
+	{
+	private:
+		ServiceLocator* serviceLocator;
+		sf::RenderWindow* gameWindow;
 
-	void Initialize();
+		void Initialize();
 
-	void Destroy();
+		void Destroy();
 
-public:
-	GameService();
+	public:
+		GameService();
 
-	~GameService();
-	
-	void Ignite();
+		~GameService();
 
-	void Update();
+		void Ignite();
 
-	void Render();
+		void Update();
 
-	bool isRunning();
+		void Render();
 
-};
+		bool isRunning();
+
+	};
+}
