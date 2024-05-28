@@ -1,7 +1,7 @@
 #include "../../Header/Event/EventService.h"
 #include "../../Header/Global/ServiceLocator.h"
 #include<iostream>
-namespace Event
+using namespace Event
 {
 	using namespace Global;
 	EventService::EventService()

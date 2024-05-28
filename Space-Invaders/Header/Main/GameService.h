@@ -3,7 +3,6 @@
 #include "../../Header/Global/ServiceLocator.h"
 namespace Main
 {
-	using namespace Global;
 	class GameService
 	{
 	private:

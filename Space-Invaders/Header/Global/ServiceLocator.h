@@ -5,11 +5,6 @@
 #include "../../Header/Event/EventService.h"
 namespace Global
 {
-    using namespace Event;
-    using namespace Graphic;
-    using namespace Time;
-    using namespace Player;
-
     // Service Locator Class summary this class manages access to various services in the application
     class ServiceLocator
     {
