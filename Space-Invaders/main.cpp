@@ -1,5 +1,20 @@
+#include"../Space-Invaders/Header/GameService.h"
+#include <iostream>
+#include <SFML/Graphics.hpp>
 
-int main()
-{
-    return 0;
-}
+using namespace std;
+  int main() {
+
+	  GameService* gameService = new GameService();
+
+	  gameService->Ignite();
+
+	  while (gameService->isRunning())
+	  {
+		  gameService->Update();
+		  gameService->Render();
+		 
+	  }
+      delete gameService;
+      return 0;
+  }
