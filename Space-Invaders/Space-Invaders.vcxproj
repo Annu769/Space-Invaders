@@ -133,10 +133,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-
-
     <ClCompile Include="Source\EventService.cpp" />
-
     <ClCompile Include="Source\GameSevice.cpp" />
     <ClCompile Include="Source\GraphicService.cpp" />
     <ClCompile Include="Source\PlayerService.cpp" />
@@ -149,30 +146,7 @@
     <ClInclude Include="Header\GraphicService.h" />
     <ClInclude Include="Header\PlayerService.h" />
     <ClInclude Include="Header\ServiceLocator.h" />
-
-    <ClCompile Include="Source\EventService\EventService.cpp" />
-    <ClCompile Include="Source\MainGameService\GameSevice.cpp" />
-    <ClCompile Include="Source\GraphicService\GraphicService.cpp" />
-    <ClCompile Include="Source\PlayerSource\PlayerController.cpp" />
-    <ClCompile Include="Source\PlayerSource\PlayerModel.cpp" />
-    <ClCompile Include="Source\PlayerSource\PlayerService.cpp" />
-    <ClCompile Include="Source\PlayerSource\PlayerView.cpp" />
-    <ClCompile Include="Source\GlobalService\ServiceLocator.cpp" />
-    <ClCompile Include="Source\TimeSource\TimeService.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Header\Event\EventService.h" />
-    <ClInclude Include="Header\Main\GameService.h" />
-    <ClInclude Include="Header\Graphic\GraphicService.h" />
-    <ClInclude Include="Header\Player\PlayerController.h" />
-    <ClInclude Include="Header\Player\PlayerModel.h" />
-    <ClInclude Include="Header\Player\PlayerService.h" />
-    <ClInclude Include="Header\Player\PlayerView.h" />
-    <ClInclude Include="Header\Global\ServiceLocator.h" />
-    <ClInclude Include="Header\TIme\TimeService.h" />
-
     <ClInclude Include="Header\TimeService.h" />
->>>>>>> main
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
