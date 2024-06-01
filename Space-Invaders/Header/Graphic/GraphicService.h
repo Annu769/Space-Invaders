@@ -33,7 +33,7 @@ namespace Graphic
 		sf::RenderWindow* getGameWindow();
 
 		sf::Color getWindowColor();
-
+		
 	};
 }
 

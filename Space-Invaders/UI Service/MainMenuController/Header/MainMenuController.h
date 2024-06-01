@@ -45,6 +45,8 @@ namespace UI
 			void initialize();
 			void render();
 			void update();
+			void processButtonInteractions();
+			bool clickedButton(sf::Sprite*, sf::Vector2f);
 		};
 	}
 }

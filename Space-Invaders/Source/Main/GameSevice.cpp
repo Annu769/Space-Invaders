@@ -21,6 +21,7 @@ namespace Main
 		serviceLocator = ServiceLocator::getInstance();
 		serviceLocator->initialize();
 		gameWindow = serviceLocator->getInstance()->getGraphicService()->getGameWindow();
+		showMainMenu();
 	}
 
 	void GameService::Destroy()
@@ -45,6 +46,7 @@ namespace Main
 		gameWindow->clear(serviceLocator->getGraphicService()->getWindowColor());
 		serviceLocator->render();
 		gameWindow->display();
+		
 	}
 
 	bool GameService::isRunning()
@@ -54,6 +56,10 @@ namespace Main
 	void GameService::setGameState(GameState new_state) { current_state = new_state; }
 
 	GameState GameService::getGameState() { return current_state; }
+	void GameService::showMainMenu()
+	{
+		setGameState(GameState::MAIN_MENU);
+	}
 
 }
 
