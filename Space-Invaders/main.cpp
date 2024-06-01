@@ -1,20 +1,20 @@
-#include"../Space-Invaders/Header/GameService.h"
+#include"../../Header/Main/GameService.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
 using namespace std;
-  int main() {
+using namespace Main;
+int main() {
 
-	  GameService* gameService = new GameService();
+	GameService* gameService = new GameService();
 
-	  gameService->Ignite();
+	gameService->Ignite();
 
-	  while (gameService->isRunning())
-	  {
-		  gameService->Update();
-		  gameService->Render();
-		 
-	  }
-      delete gameService;
-      return 0;
-  }
+	while (gameService->isRunning())
+	{
+		gameService->Update();
+		gameService->Render();
+
+	}
+	delete gameService;
+	return 0;
+}
