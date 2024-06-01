@@ -49,7 +49,6 @@ namespace Main
 
 	bool GameService::isRunning()
 	{
-		// Checks if the game is currently running.
 		return serviceLocator->getGraphicService()->isGameWindowOpen();
 	}
 	void GameService::setGameState(GameState new_state) { current_state = new_state; }

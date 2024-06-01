@@ -33,7 +33,7 @@ namespace Player
 	}
 	void PlayerController::MoveLeft(float deltaTime) {
 		sf::Vector2f currposition = playerModel->getPlayerPosition();
-		currposition.x += playerModel->playerMovement_speed * deltaTime;
+		currposition.x += playerModel->player_movement_speed * deltaTime;
 
 		currposition.x = std::max(currposition.x, playerModel->left_most_position.x);
 		playerModel->setPlayerPosition(currposition);
@@ -42,7 +42,7 @@ namespace Player
 	{
 
 		sf::Vector2f currposition = playerModel->getPlayerPosition();
-		currposition.x -= playerModel->playerMovement_speed * deltaTime;
+		currposition.x -= playerModel->player_movement_speed * deltaTime;
 
 		currposition.x = std::max(currposition.x, playerModel->right_most_position.x);
 		playerModel->setPlayerPosition(currposition);

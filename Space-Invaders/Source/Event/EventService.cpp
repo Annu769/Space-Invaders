@@ -5,9 +5,9 @@ namespace Event
 {
 	using namespace Global;
 	EventService::EventService()
-		: gameWindow(nullptr)  // Initialize gameWindow to nullptr
+		: gameWindow(nullptr)  
 	{
-		// No need to initialize gameEvent, as it will be default-initialized
+		
 	}
 	EventService :: ~EventService() = default;
 
