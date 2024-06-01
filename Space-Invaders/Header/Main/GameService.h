@@ -3,6 +3,12 @@
 #include "../../Header/Global/ServiceLocator.h"
 namespace Main
 {
+	enum GameState
+	{
+		BOOT,
+		MAIN_MENU,
+		GAMEPLAY,
+	};
 	using namespace Global;
 	class GameService
 	{
