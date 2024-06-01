@@ -35,6 +35,7 @@ namespace Main
 		bool isRunning();
 		static void setGameState(GameState new_state);
 		static GameState getGameState();
+		void showMainMenu();
 
 	};
 }

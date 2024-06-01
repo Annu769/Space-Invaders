@@ -57,7 +57,7 @@ namespace Global
 	{
 		graphicService->render();
 		uiService->render();
-		//playerService->render();
+		playerService->render();
 		
 	}
 	GraphicService* ServiceLocator::getGraphicService()
