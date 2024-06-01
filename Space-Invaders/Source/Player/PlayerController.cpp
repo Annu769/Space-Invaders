@@ -21,11 +21,14 @@ namespace Player
 	void PlayerController::playerProcesInput()
 	{
 		float deltatime = ServiceLocator::getInstance()->getTimeService()->getDeltaTime();
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+		EventService* event_service = ServiceLocator::getInstance()->getEventService();
+
+		if (event_service->pressedLeftKey() || event_service->pressedAKey())
 		{
 			MoveLeft(deltatime);
 		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+
+		if (event_service->pressedRightKey() || event_service->pressedDKey())
 		{
 			MoveRight(deltatime);
 		}
