@@ -13,6 +13,7 @@ namespace Main
 	class GameService
 	{
 	private:
+		static GameState current_state;
 		ServiceLocator* serviceLocator;
 		sf::RenderWindow* gameWindow;
 
@@ -32,6 +33,8 @@ namespace Main
 		void Render();
 
 		bool isRunning();
+		static void setGameState(GameState new_state);
+		static GameState getGameState();
 
 	};
 }
