@@ -4,6 +4,7 @@
 #include "../../Header/TIme/TimeService.h"
 #include "../../Header/Event/EventService.h"
 #include "../../UI Service/MainMenuController/Header/UIService.h"
+#include "../../Header/Enemy/EnemyService.h";
 namespace Global
 {
     using namespace Event;
@@ -11,6 +12,7 @@ namespace Global
     using namespace Time;
     using namespace Player;
     using namespace UI;
+    using namespace Enemy;
 
     // Service Locator Class summary this class manages access to various services in the application
     class ServiceLocator
@@ -21,6 +23,7 @@ namespace Global
         PlayerService* playerService;
         TimeService* timeService;
         UIService* uiService;
+        EnemyService* enemy_Service;
 
         ServiceLocator();
         ~ServiceLocator();
@@ -41,6 +44,7 @@ namespace Global
         PlayerService* getPlayerService();
         TimeService* getTimeService();
         UIService* getUIService();
+        EnemyService* getEnemySevice();
     };
 
 }

@@ -52,7 +52,7 @@ namespace Event
 	bool EventService::isGameWindowOpen() { return gameWindow && gameWindow->isOpen(); }
 
 	bool EventService::gameWindowWasClosed() { return gameEvent.type == sf::Event::Closed; }
-	bool EventService::pressedLeftKey()
+	/*bool EventService::pressedLeftKey()
 	{
 		return gameEvent.key.code == sf::Keyboard::Left;
 	}
@@ -69,7 +69,7 @@ namespace Event
 	bool EventService::pressedRightMouseButton()
 	{
 		return gameEvent.type == sf::Event::MouseButtonPressed && gameEvent.mouseButton.button == sf::Mouse::Right;
-	}
+	}*/
 	void EventService::updateMouseButtonsState(ButtonState& current_button_state, sf::Mouse::Button mouse_button)
 	{
 		if (sf::Mouse::isButtonPressed(mouse_button))
