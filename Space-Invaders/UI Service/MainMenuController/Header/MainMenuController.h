@@ -1,21 +1,25 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+
 namespace UI
 {
 	namespace MainMenu
 	{
 		class MainMenuController
 		{
-		private :
+		private:
 			const sf::String background_texture_path = "assets/textures/space_invaders_bg.png";
 			const sf::String play_button_texture_path = "assets/textures/play_button.png";
 			const sf::String instructions_button_texture_path = "assets/textures/instructions_button.png";
 			const sf::String quit_button_texture_path = "assets/textures/quit_button.png";
 
+			// Constants:
 			const float button_width = 400.f;
 			const float button_height = 140.f;
 
 			sf::RenderWindow* game_window;
+
+			// Textures:
 			sf::Texture background_texture;
 			sf::Sprite background_sprite;
 
@@ -27,11 +31,12 @@ namespace UI
 
 			sf::Texture quit_button_texture;
 			sf::Sprite quit_button_sprite;
-			sf::RenderWindow* gameWindow;
+
+			// Since this is a single image, we can check if it loaded or not during initialization
 			void initializeBackgroundImage();
 			void scaleBackgroundImage();
 
-		
+			// however, we have 3 buttons so it's better to create a seperate function to check if they are loaded
 			void initializeButtons();
 			bool loadButtonTexturesFromFile();
 			void setButtonSprites();
@@ -39,14 +44,13 @@ namespace UI
 			void scaleAllButttons();
 			void scaleButton(sf::Sprite* button_to_scale);
 			void positionButtons();
+
 		public:
 			MainMenuController();
-		//	~MainMenuController();
+
 			void initialize();
-			void render();
 			void update();
-			void processButtonInteractions();
-			bool clickedButton(sf::Sprite*, sf::Vector2f);
+			void render();
 		};
 	}
 }
